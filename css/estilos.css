@@ -1,0 +1,53 @@
+/* tirar todo o estilo da página
+body, ul, li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2 rem;
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+}*/
+
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXf1p1NsWyg809XKrfHIPwsrE3cvYxJ8FIap-kmZKTL0iN7rIN&usqp=CAU");
+  background-size: auto 100vh;
+  height: 100vh;
+  font-family: Arial;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  background-color: white;
+}
+
+/* força virar coluna o que era um item embaixo do outro */
+.menu ul {
+  display: flex;
+  justify-content: space-around; /* justify-content funciona em conjunto com o flex */
+}
+
+/* para tirar as bolinhas somente do li do menu */
+.menu li {
+  list-style: none;
+}
+
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-subtitle {
+  font-style: italic;
+}
