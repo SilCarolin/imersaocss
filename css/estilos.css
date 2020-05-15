@@ -6,10 +6,10 @@
 }
 
 body {
-  background-image: url(../img/deserto-saara.jpg);
+  background-image: url(../img/fundo.jpg);
   background-size: auto 100vh;
   height: 100vh;
-  font-family: Arial;
+  font-family: 'Source Code Pro', monospace;
   font-size: 10px; /* unidade tamanho fixa só para o body */
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 header {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,14 +83,60 @@ a:hover {
 
 .site-title {
   font-size: 4em; /* fonte responsível, unidade de fonte relativa: 4 vexes o tamanho do body */
+  font-family: 'Satisfy', cursive;
 }
-
 
 .site-subtitle {
   font-style: italic;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.8em;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.portfolio .grid {
+  display: grid; /* grid voce diz qts colunas */
+  gap: 2em; /* gap é usado somente qd declara grid. Define o espaçamento das colunas ou linha do grid*/
+  /*grid-template-columns: 240px 240px; colocar dentro do breakpoint */
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;/* só usa com o display grid */
+    align-content: center;
+    height: calc(100vh - 4em - 48px - 1.5em);
+    /*background-color: peru; usar para testar */
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
-  height: 150px;
-  width: 150px;;
+  height: 180px;
+  width: 240px;
+  object-fit: cover; /* cover = corta a foto de acordo com o tamanho definido/ contain = fotos com as proporções originais */
+  object-position: left bottom; /* da onde posiciona o corte*/
+  border-radius: 10px;
 }
+
+
